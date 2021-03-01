@@ -1,0 +1,55 @@
+/* eslint-disable import/prefer-default-export */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import styled from "styled-components";
+
+export const Container = styled.section`
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+  min-height: 250px;
+  padding: 80px 0;
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 38% 38% 14%;
+    column-gap: 2.5%;
+    margin-top: 50px;
+
+    input {
+      outline: none;
+      background: #fffefe;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.45);
+      border-radius: 8px;
+      border: solid 1px #fffefe;
+      height: 40px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+    button {
+      height: 40px;
+      width: 100%;
+      background: #000000;
+      border-radius: 10px;
+      color: #ffffff;
+      outline: none;
+      border: 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+`;
