@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import ItemProduct from "../ItemProduct";
+import { Container } from "./style";
+import itemsStore from "../../service/store";
 
 function CarouselItem() {
   const responsive = {
@@ -28,36 +30,35 @@ function CarouselItem() {
   };
 
   return (
-    <Carousel
-      swipeable={false}
-      draggable={false}
-      showDots
-      responsive={responsive}
-      ssr // means to render carousel on server-side.
-      infinite
-      autoPlaySpeed={3000}
-      keyBoardControl
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px image-item"
-      sliderClass="react-multi-carousel-track"
-      autoPlay
-    >
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ItemProduct />
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ItemProduct />
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ItemProduct />
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ItemProduct />
-      </div>
-    </Carousel>
+    <Container>
+      <h2>Destaques</h2>
+      <Carousel
+        swipeable={false}
+        draggable={false}
+        showDots
+        responsive={responsive}
+        ssr // means to render carousel on server-side.
+        infinite
+        autoPlaySpeed={3000}
+        keyBoardControl
+        transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px image-item"
+        sliderClass="react-multi-carousel-track"
+        autoPlay
+      >
+        {itemsStore.map((item) => (
+          <div
+            key={item.id}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ItemProduct dados={item} />
+          </div>
+        ))}
+      </Carousel>
+    </Container>
   );
 }
 

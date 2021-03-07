@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
+import "react-multi-carousel/lib/styles.css";
+import Routes from "./service/routes";
+import ToastAnimated from "./components/Toast";
 
 function App() {
   return (
     <>
-      <Home />
-      <Footer />
+      <ToastAnimated />
+      <Routes />
     </>
   );
 }

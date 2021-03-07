@@ -7,6 +7,9 @@ export const Nav = styled.nav`
   width: 100%;
   height: 75px;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 
   #menu{
       max-width: 1200px;
@@ -49,6 +52,13 @@ export const Nav = styled.nav`
           top:0;
       }
   }
+`;
+
+export const NavFixo = styled.div`
+
+  width: 100%;
+  height: 75px;
+
 `;
 
 

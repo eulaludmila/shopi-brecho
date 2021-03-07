@@ -24,6 +24,7 @@ export const Container = styled.section`
     grid-template-columns: 38% 38% 14%;
     column-gap: 2.5%;
     margin-top: 50px;
+    align-items: center;
 
     input {
       outline: none;
@@ -34,6 +35,18 @@ export const Container = styled.section`
       height: 40px;
       padding: 15px;
       margin-top: 10px;
+    }
+
+    p {
+      height: 20px;
+      margin: 6px 0 0 0;
+      font-size: 14px;
+      color: #ed2727;
+    }
+
+    .container-button {
+      width: 100%;
+      height: 97px;
     }
 
     button {

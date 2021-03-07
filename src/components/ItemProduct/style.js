@@ -12,8 +12,23 @@ export const Item = styled.div`
   border-radius: 10px;
   position: relative;
   padding-bottom: 20px;
+  cursor: pointer;
+  & a,
+  & a:active,
+  & a:link,
+  & a:visited {
+    color: #000;
+    text-decoration: none;
+  }
   & + div {
     margin-left: 30px;
+  }
+
+  &:hover div.details button {
+    margin-left: 25px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
   }
 
   div.image-product {
@@ -49,8 +64,16 @@ export const Item = styled.div`
       text-align: center;
     }
 
+    .price {
+      margin: 0;
+    }
+
     p {
+      height: 25px;
       text-align: center;
+      text-decoration: line-through;
+      margin: 0 0 10px 0;
+      color: #ff5a5a;
     }
 
     button {
@@ -63,6 +86,26 @@ export const Item = styled.div`
       color: #ffffff;
       font-size: 18px;
       font-weight: 700;
+      opacity: 0;
+      visibility: hidden;
+      margin-left: -100px;
+      cursor: pointer;
+    }
+
+    .details {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+      text-decoration: underline;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .stock {
+      font-size: 20px;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
     }
   }
 `;

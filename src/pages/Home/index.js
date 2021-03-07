@@ -1,9 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
-import Menu from "../../components/Menu";
-import PageDefault from "../PageDefault";
-import { Container, ContainerSobre } from "./style";
-import "react-multi-carousel/lib/styles.css";
+import { ContainerSobre } from "./style";
 import CarouselItem from "../../components/CarouselItem";
 import imgSobre from "../../assets/images/sobre.svg";
 import FormNews from "../../components/FormNews";
@@ -11,12 +8,9 @@ import logo from "../../assets/images/ShopI-Logo.svg";
 
 function Home() {
   return (
-    <PageDefault>
-      <Menu />
+    <>
       <Header />
-      <Container>
-        <CarouselItem />
-      </Container>
+      <CarouselItem />
       <ContainerSobre>
         <div className="container">
           <div className="area-texto">
@@ -57,7 +51,7 @@ function Home() {
         </div>
       </ContainerSobre>
       <FormNews />
-    </PageDefault>
+    </>
   );
 }
 
