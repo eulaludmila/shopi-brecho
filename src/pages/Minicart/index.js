@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useHistory, Link } from "react-router-dom";
 import { Container, Empty } from "./style";
-import clothes from "../../assets/images/clothes.svg";
 import { CartContext } from "../../context/CartContext";
 
 export default function Minicart() {
@@ -34,7 +33,7 @@ export default function Minicart() {
       {items.map((item) => (
         <div key={item.id} className="item">
           <div onClick={() => details(item.id)}>
-            <img src={clothes} alt="calça" />
+            <img src={item.img} alt="calça" />
           </div>
           <div className="description">
             <h3>{item.name}</h3>

@@ -24,13 +24,6 @@ export const Item = styled.div`
     margin-left: 30px;
   }
 
-  &:hover div.details button {
-    margin-left: 25px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 1s;
-  }
-
   div.image-product {
     width: 100%;
     height: 180px;
@@ -76,20 +69,44 @@ export const Item = styled.div`
       color: #ff5a5a;
     }
 
-    button {
-      width: 80%;
-      margin: 0 auto;
-      height: 40px;
-      background: #ff5a5a;
-      border-radius: 10px;
-      border: 0;
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: 700;
-      opacity: 0;
-      visibility: hidden;
-      margin-left: -100px;
-      cursor: pointer;
+    @media (min-width: 1200px) {
+      button {
+        width: 80%;
+        margin: 0 auto;
+        height: 40px;
+        background: #ff5a5a;
+        border-radius: 10px;
+        border: 0;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: -100px;
+        cursor: pointer;
+      }
+
+      &:hover div.details button {
+        margin-left: 25px;
+        opacity: 1;
+        visibility: visible;
+        transition: all 1s;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      button {
+        width: 80%;
+        margin: 0 auto;
+        height: 40px;
+        background: #ff5a5a;
+        border-radius: 10px;
+        border: 0;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+      }
     }
 
     .details {

@@ -45,7 +45,7 @@ function Details() {
               </p>
               <p className="value">Por {item.price}</p>
 
-              <div>
+              <div className="button">
                 {item.quantity !== item.stock ? (
                   <button type="button" onClick={() => handleBuy(item)}>
                     Comprar

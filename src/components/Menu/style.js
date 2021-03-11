@@ -52,6 +52,12 @@ export const Nav = styled.nav`
           top:0;
       }
   }
+
+  @media(max-width:1220px){
+      #menu {
+          padding: 0 20px;
+      }
+  }
 `;
 
 export const NavFixo = styled.div`

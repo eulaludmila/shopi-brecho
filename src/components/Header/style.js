@@ -7,12 +7,18 @@ export const ContainerHeader = styled.header`
   width: 100%;
   height: 600px;
   background-image: url(${header});
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: 900px) {
+    & {
+      height: 300px;
+    }
+  }
 
   #container {
     max-width: 1200px;
-    height: inherit;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;

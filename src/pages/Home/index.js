@@ -30,9 +30,9 @@ function Home() {
               em 70%.
             </p>
           </div>
-          <img src={imgSobre} alt="Closet" />
+          <img src={imgSobre} alt="Closet" className="closet" />
           <div className="area-texto">
-            <h2>
+            <h2 className="style-text">
               <img src={brecho} alt="ShopI" className="logo" />
             </h2>
             <p>

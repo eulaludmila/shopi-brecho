@@ -9,26 +9,87 @@ export const Container = styled.section`
   background: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.32);
   border-radius: 10px;
-  margin: 50px auto;
 
-  .item {
-    width: 100%;
-    display: grid;
-    column-gap: 5%;
-    grid-template-columns: 15% 65% 10%;
-    border-bottom: 2px solid #ff5a5a;
-    padding-bottom: 15px;
+  .item + .item {
+    margin-top: 20px;
+  }
 
-    & + .item {
-      margin-top: 20px;
+  @media (min-width: 1020px) {
+    margin: 50px auto;
+    .item {
+      width: 100%;
+      display: grid;
+      column-gap: 5%;
+      grid-template-columns: 15% 65% 10%;
+      border-bottom: 2px solid #ff5a5a;
+      padding-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      cursor: pointer;
     }
   }
 
-  img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    cursor: pointer;
+  @media (min-device-width: 700px) and (max-width: 1020px) {
+    margin: 50px 20px;
+    .item {
+      width: 100%;
+      display: grid;
+      column-gap: 5%;
+      grid-template-columns: 20% 60% 10%;
+      border-bottom: 2px solid #ff5a5a;
+      padding-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-device-width: 600px) and (max-device-width: 700px) {
+    margin: 50px 20px;
+    .item {
+      width: 100%;
+      display: grid;
+      column-gap: 5%;
+      grid-template-columns: 25% 55% 10%;
+      border-bottom: 2px solid #ff5a5a;
+      padding-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-device-width: 600px) {
+    margin: 50px 20px;
+    .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid #ff5a5a;
+      padding-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    h3 {
+      text-align: center;
+    }
+    .quantidade {
+      justify-content: center;
+      margin: 30px 0;
+    }
   }
 
   .description {
