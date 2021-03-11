@@ -11,10 +11,8 @@ function Header() {
             A <img src={logo} alt="Logo" /> está com você
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna.
+            Venha nos conhecer e aproveitar os diversos looks e preços
+            baixissímos
           </p>
         </div>
       </div>

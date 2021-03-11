@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import CarouselItem from "../../components/CarouselItem";
 import { Container } from "./style";
-import clothes from "../../assets/images/clothes.svg";
 import itemsStore from "../../service/store";
 import { CartContext } from "../../context/CartContext";
 import { showToast } from "../../components/Toast";
@@ -31,7 +30,7 @@ function Details() {
         <>
           <Container>
             <div>
-              <img src={clothes} alt="Calças" />
+              <img src={item.img} alt="Calças" />
             </div>
             <div className="details">
               <h2>{item.name}</h2>

@@ -28,6 +28,7 @@ export const Container = styled.section`
     width: 100%;
     height: 120px;
     object-fit: cover;
+    cursor: pointer;
   }
 
   .description {
@@ -97,5 +98,22 @@ export const Container = styled.section`
       color: #000000;
       margin: 0;
     }
+  }
+`;
+
+export const Empty = styled.section`
+  max-width: 1000px;
+  min-height: 100px;
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  flex-direction: column;
+
+  a {
+    color: #000;
+    text-decoration: underline;
   }
 `;

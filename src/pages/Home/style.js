@@ -24,18 +24,24 @@ export const ContainerSobre = styled.section`
 
       h2{
         width: 90%;
+        height: 100px;
         text-align: center;
         padding-bottom: 15px;
         border-bottom: solid 3px #000000;
         margin: 0 auto;
       }
 
+      h2 img{
+        width:100%;
+        height: 90px;
+      }
       img{
         width:100%;
       }
 
       p{
         margin: 30px 0 0 0;
+        text-align: justify;
       }
 
     }

@@ -1,11 +1,15 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useContext } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Container } from "./style";
+import { useHistory, Link } from "react-router-dom";
+import { Container, Empty } from "./style";
 import clothes from "../../assets/images/clothes.svg";
 import { CartContext } from "../../context/CartContext";
 
 export default function Minicart() {
   const { updateAmount, items, deleteItem } = useContext(CartContext);
+  const history = useHistory();
 
   function handleAmount(id, type) {
     updateAmount(id, type);
@@ -14,11 +18,22 @@ export default function Minicart() {
     deleteItem(id);
   }
 
-  return (
+  function details(id) {
+    history.push(`/details/${id}`);
+  }
+
+  return items.length === 0 ? (
+    <Empty>
+      <h3>Não possui nenhum item adicionado ao carrinho :/</h3>
+      <p>
+        Volte a página inicial <Link to="/">clicando aqui</Link>
+      </p>
+    </Empty>
+  ) : (
     <Container>
       {items.map((item) => (
         <div key={item.id} className="item">
-          <div>
+          <div onClick={() => details(item.id)}>
             <img src={clothes} alt="calça" />
           </div>
           <div className="description">

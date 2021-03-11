@@ -66,3 +66,18 @@ export const Container = styled.section`
     }
   }
 `;
+
+export const ContainerReceived = styled.section`
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+  min-height: 250px;
+  padding: 80px 0;
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+  h3 {
+    text-align: center;
+  }
+`;

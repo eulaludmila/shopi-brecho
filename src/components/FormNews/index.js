@@ -1,20 +1,29 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Container } from "./style";
+import { Container, ContainerReceived } from "./style";
 import shema from "./validation";
 
 function FormNews() {
+  const [received, setReceived] = useState(false);
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(shema),
   });
 
   function onSubmit() {
-    return false;
+    setReceived(true);
   }
 
-  return (
+  return received ? (
+    <ContainerReceived>
+      <h2>NewsLetter</h2>
+      <h3>
+        Obrigado por se cadastrar! Estamos muito contente com você junto com a
+        gente :)
+      </h3>
+    </ContainerReceived>
+  ) : (
     <Container>
       <h2>NewsLetter</h2>
       <h3>
