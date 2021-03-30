@@ -24,6 +24,13 @@ export const Item = styled.div`
     margin-left: 30px;
   }
 
+  &:hover div.details button {
+    margin-left: 25px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
+  }
+
   div.image-product {
     width: 100%;
     height: 180px;
@@ -84,13 +91,6 @@ export const Item = styled.div`
         visibility: hidden;
         margin-left: -100px;
         cursor: pointer;
-      }
-
-      &:hover div.details button {
-        margin-left: 25px;
-        opacity: 1;
-        visibility: visible;
-        transition: all 1s;
       }
     }
 

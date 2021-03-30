@@ -34,16 +34,11 @@ function Details() {
             </div>
             <div className="details">
               <h2>{item.name}</h2>
-              <p className="description">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa. Fusce posuere, magna sed
-                pulvinar ultricies, purus lectus malesuada libero, sit amet
-                commodo magna eros quis urna.
-              </p>
+              <p className="description">{item.description}</p>
               <p className="oldPrice">
-                {item.discount && `De ${item.oldPrice}`}
+                {item.discount && `De R$${item.oldPrice}`}
               </p>
-              <p className="value">Por {item.price}</p>
+              <p className="value">Por R${item.price}</p>
 
               <div className="button">
                 {item.quantity !== item.stock ? (

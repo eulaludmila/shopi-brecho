@@ -59,6 +59,7 @@ export const Container = styled.section`
         color: #ffffff;
         outline: none;
         border: 0;
+        cursor: pointer;
       }
 
       div {

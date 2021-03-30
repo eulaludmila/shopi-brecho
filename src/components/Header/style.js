@@ -42,5 +42,29 @@ export const ContainerHeader = styled.header`
         margin-top: 40px;
       }
     }
+
+    @media (max-width: 410px) {
+      div {
+        max-width: 400px;
+        height: 300px;
+
+        h1 {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          img {
+            margin: 0 15px;
+          }
+        }
+
+        p {
+          font-size: 20px;
+          margin-top: 40px;
+          text-align: center;
+          padding: 0 15px;
+        }
+      }
+    }
   }
 `;

@@ -45,5 +45,9 @@ export const Container = styled.section`
     .react-multiple-carousel__arrow--right{
         right:0
     }
+
+    @media(max-width: 780px){
+        margin: 0 auto;
+    }
    
 `;

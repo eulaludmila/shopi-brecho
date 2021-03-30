@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useHistory, Link } from "react-router-dom";
 import { Container, Empty } from "./style";
@@ -20,6 +20,12 @@ export default function Minicart() {
   function details(id) {
     history.push(`/details/${id}`);
   }
+
+  const sumValue = useCallback((value, qtd) => {
+    let price = parseFloat(value.replace(",", ".")) * qtd;
+    price = price.toFixed(2).replace(".", ",");
+    return price;
+  }, []);
 
   return items.length === 0 ? (
     <Empty>
@@ -71,8 +77,8 @@ export default function Minicart() {
             </div>
           </div>
           <div className="values">
-            {item.discount && <span>${item.oldPrice}</span>}
-            <p>{item.price}</p>
+            {item.discount && <span>R${item.oldPrice}</span>}
+            <p>R${sumValue(item.price, item.quantity)}</p>
           </div>
         </div>
       ))}
