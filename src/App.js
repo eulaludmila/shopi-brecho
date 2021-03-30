@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import "react-multi-carousel/lib/styles.css";
 import Routes from "./service/routes";
 import ToastAnimated from "./components/Toast";
