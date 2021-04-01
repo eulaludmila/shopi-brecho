@@ -12,7 +12,6 @@
 
 - Context api para adicionar itens no carrinho de forma dinâmica
 
-![cart](https://user-images.githubusercontent.com/47863213/113354320-64393880-9315-11eb-9a9a-33872df14efa.png)
 ![cart](https://user-images.githubusercontent.com/47863213/113355072-95663880-9316-11eb-98c5-1f714f0de9e5.gif)
 
 ## Getting Started
