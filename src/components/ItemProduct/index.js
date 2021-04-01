@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 import { Item } from "./style";
 import price from "../../assets/images/price.svg";
 
@@ -39,5 +39,22 @@ function ItemProduct({ dados }) {
     </Item>
   );
 }
+
+ItemProduct.propTypes = {
+  dados: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      discount: PropTypes.bool.isRequired,
+      img: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      quantity: PropTypes.number.isRequired,
+      price: PropTypes.string.isRequired,
+      oldPrice: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+};
+ItemProduct.defaultProps = {
+  dados: {},
+};
 
 export default ItemProduct;
