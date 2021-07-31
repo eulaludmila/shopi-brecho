@@ -4,7 +4,7 @@
 
 # Objetivo
 
-### Sistema desenvolvido com para colocar em prática validção e estado de componente
+### Aplicação desenvolvida para colocar em prática validação e estado de componente
 
 - Validação de formulário usando React Hook Forms
 
